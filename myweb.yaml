@@ -16,7 +16,7 @@ spec:
         app: myweb
     spec:
       containers:
-      - image: 10.0.5.179:5000/myweb:1
+      - image: 10.0.5.179:5000/myweb:5
         imagePullPolicy: Always
         name: myweb
 
