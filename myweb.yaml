@@ -3,30 +3,30 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   labels:
-    app: myweb
-  name: myweb
+    app: senthilweb
+  name: senthilweb
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: myweb
+      app: senthilweb
   template:
     metadata:
       labels:
-        app: myweb
+        app: senthilweb
     spec:
       containers:
-      - image: 10.0.5.179:5000/myweb:4
+      - image: 10.0.5.179:5000/senthilweb:5
         imagePullPolicy: Always
-        name: myweb
+        name: senthilweb
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: myweb
-  name: myweb
+    app: senthilweb
+  name: senthilweb
 spec:
   ports:
   - nodePort: 32223
@@ -34,5 +34,5 @@ spec:
     protocol: TCP
     targetPort: 80
   selector:
-    app: myweb
+    app: senthilweb
   type: NodePort
