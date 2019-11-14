@@ -16,7 +16,7 @@ spec:
         app: senthilweb
     spec:
       containers:
-      - image: 10.0.5.179:5000/senthilweb:5
+      - image: 10.0.5.179:5000/senthilweb:7
         imagePullPolicy: Always
         name: senthilweb
 
